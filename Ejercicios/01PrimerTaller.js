@@ -43,9 +43,19 @@ class Prestamo{
     let cuotas =parseFloat(this.cuotas)
     
     let total = valor +(cuotas*(valor * valInteres)) 
-    console.log(total)
+    console.log(`Nuevo Total a pagar $${total}`)
 
    }
+   toString(){
+    console.log(`Infromación del prestamo: nombre:${this.nombre}, Valor:${this.valor}, Valor con:${this.nombre}`)
+   }
 }
+this.Id = valorId
+      this.nombre = valornombre
+      this.valor = valorValor
+      this.conIntereses = []   
+      this.fecha = valorfecha
+      this.cuotas = valorcuotas
+      this.valorInteres = valorInteres
 let instancia = new Prestamo(123, "Luz", "300", 4, 56, 0.05)
 instancia.Refinanciar(5)

@@ -1,11 +1,14 @@
+/* Se crea la clase Prestamo y se le agrega un consturctor con atributos*/
 class Prestamo {
   constructor(valorValor, valorcuotas, valorfecha, valorInteres) {
-    this.valor = valorValor;
+    /* Estos son los atributos asignados a Prestamo */
+    this.valor = valorValor; /* A los atributos se les asigna */
     this.conIntereses = [];
     this.fecha = valorfecha;
     this.cuotas = valorcuotas;
     this.valorInteres = valorInteres;
   }
+  /*  */
   infouser(Id, nombre) {
     this.Id = Id;
     this.nombre = nombre;
@@ -33,7 +36,7 @@ class Prestamo {
     let cuotas = parseFloat(this.cuotas);
     if (valor > 0) {
       let total = valor + cuotas * (valor * valInteres) - valorPagar;
-      console.log(`Aun debe esta cantidad: $${total}`);
+      this.conIntereses = console.log(`Aun debe esta cantidad: $${total}`);
     } else {
       console.log(`No debe nada :)`);
     }
@@ -66,7 +69,10 @@ class Prestamo {
     this.cuotas = valorcuotas;
     this.valorInteres = valorInteres; */
 
-let instancia = new Prestamo("300", 4, "09/07/2024", 0.05);
-instancia.infouser("123", "Luz");
-instancia.Refinanciar(8);
-instancia.toString();
+let prestamo = new Prestamo("300", 4, "09/07/2024", 0.05);
+prestamo.infouser("123", "Luz");
+prestamo.CalcularValorTotalPrestamo();
+prestamo.ValorPagarInteres();
+prestamo.PagarCuota(300);
+prestamo.Refinanciar(8);
+prestamo.toString();

@@ -1,55 +1,47 @@
-class Fruta{
-    constructor(color, tipo,vitaminas){
-        this.color = color
-        this.tipo = tipo
-        this.vitaminas = vitaminas
+class Persona {
+    constructor(nombre, edad, correo){
+        this.nombre = nombre
+        this.edad = edad
+        this.correo=correo
     }
-    setColor(color) {
-        this.color = color;
-      }
-    getubiColor() {
-        return this.color;
-    }
-
-    setTipo(tipo) {
-        this.tipo = tipo;
-      }
-    getubiTipo() {
-        return this.tipo;
-    }
-
-    setColor(vitaminas) {
-        this.vitaminas = vitaminas;
-      }
-    getubiColor() {
-        return this.vitaminas;
-    }
-    datosxd(){
-        console.log(`${this.color}`)
-
+    InfoPersona(){
+        return `persona= nombre:${this.nombre}, edad:${this.edad}, correo:${this.correo}`
     }
 }
-let fruta = new Fruta("Blue ","de árbolxd", "Si tiene","4;)")
-
-class Manzana extends Fruta{
-    constructor(color, tipo,vitaminas,cantidad){
-        super(color, tipo, vitaminas)
-        this.cantidad = cantidad
+class Alumno extends Persona{
+    constructor(nombre, edad, correo, matricula){
+        super(nombre, edad, correo)
+        this.matricula = matricula
     }
-    mostrardatos(){
-        console.log(this.color + super.getubiColor())
+    InfoAlumno(){
+        return `Alumno= nombre:${this.nombre}, edad:${this.edad}, correo:${this.correo}, matrícula:${this.matricula}`
     }
 }
-let manzana = new Manzana("amarillo","de árbolxd", "Si tiene","4;)")
-manzana.mostrardatos()
-
-class Pera extends Fruta{
-    constructor(color, tipo,vitaminas, sabor){
-        super(color, tipo, vitaminas)
-        this.sabor=sabor
+class Profesor extends Persona{
+    constructor(nombre, edad, correo, id){
+        super(nombre, edad, correo)
+        this.id = id
+    }
+    set setMateria(materia){
+        this.materia=materia
+    }
+    get getMateria(){
+        return this.materia
     }
 
-    
+    InfoProfesor(){
+        return `Profesor= nombre:${this.nombre}, edad:${this.edad}, correo:${this.correo}, Id:${this.id}`
+    }
 }
+
+
+let alumno = new Alumno("José", 14, "jose@gmail.com", true, "Si tiene")
+console.log(alumno.InfoAlumno())
+
+let profesor = new Profesor("Alex", 41, "Alex@gmail.com", 123456789)
+console.log(profesor.InfoProfesor())
+console.log(profesor.InfoPersona())
+profesor.setMateria = "Español"
+console.log(profesor.getMateria)
 
 

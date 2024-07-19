@@ -35,7 +35,27 @@ class Panaderia{
     get getcostPro(){
         return this.costoProduccion
     }
+    infoPanaderia(){
+        return ` Información de la Panadería: 
+        Tipo de pan: ${this.tipoPan}, 
+        Insumos: ${this.insumo}
+        Cantidad Producto: ${this.cantPro}
+        Coste de producción: ${this.costoProduccion}`
+        
+        
+    }
 }
 let panaderia = new Panaderia(1,2,3,4)
-panaderia.settipoPan = "Pollo"
+panaderia.settipoPan = "Pan Pizza"
 console.log(panaderia.gettipoPan)
+
+panaderia.setinsumo = ["Leche", " huevos", " Queso", " Harina"]
+console.log(panaderia.getinsumo)
+
+panaderia.setcantPro = "100"
+console.log(panaderia.getcantPro)
+
+panaderia.setcostoPro = "10000"
+console.log(panaderia.setcostoPro)
+
+console.log(panaderia.infoPanaderia())

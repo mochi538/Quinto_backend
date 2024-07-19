@@ -9,5 +9,33 @@ class Panaderia{
         this.cantPro = cantidadProducida
         this.costoProduccion = costoProduccion 
     }
+    set settipoPan(tipoPan){
+        this.tipoPan = tipoPan
+    }
+    set setinsumo(insumo){
+        this.insumo = insumo
+    }
+    set setcantPro(cantPro){
+        this.cantPro = cantPro
+        
+    }
+    set setcostoPro(costPro){
+        this.costoProduccion = costPro 
+    }
 
+    get gettipoPan(){
+        return this.tipoPan 
+    }
+    get getinsumo(){
+        return this.insumo
+    }
+    get getcantPro(){
+        return this.cantPro 
+    }
+    get getcostPro(){
+        return this.costoProduccion
+    }
 }
+let panaderia = new Panaderia(1,2,3,4)
+panaderia.settipoPan = "Pollo"
+console.log(panaderia.gettipoPan)

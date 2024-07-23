@@ -42,23 +42,21 @@ class Comic {
   }
 }
 class Autor extends Comic {
-  #nombreAutor;
+  #nombre;
   _bibliografia;
-  constructor(nombreAutor, bibliografia) {
-    this.#nombreAutor = nombreAutor;
+  constructor(nombre, bibliografia, titulo) {
+    super(titulo)
+    this.#nombre = nombre;
     this._bibliografia = bibliografia;
   }
   _obtenerInfo() {
     return `Información del comic:
                 Información del comic:"No hay info"
-                Nombre del autor: 
+                Nombre del autor: ${this.#nombre}
                 Bibliografía: ${this._bibliografia}`;
   }
 }
 let comic = new Comic("Citrus", "62000", 50);
-let autor = new Autor(
-  "Saburouta",
-  "El mejor comic GL, mi evento canon más personal"
-);
+let autor = new Autor("Holaa", "mundo");
 console.log(comic._accesoPublicoInfo(20, 40));
 console.log(autor._obtenerInfo());

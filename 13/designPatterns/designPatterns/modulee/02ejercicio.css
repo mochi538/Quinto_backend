@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.btn {
+    width: 5rem;
+    border: 3px solid black;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: rgb(255, 217, 0);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+}

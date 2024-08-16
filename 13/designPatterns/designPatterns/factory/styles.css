@@ -1,0 +1,18 @@
+.title {
+    font-family: "Russo One", sans-serif;
+}
+
+button {
+    font-family: "Russo One", sans-serif;
+    padding: 0.5rem;
+}
+select {
+    font-family: "Russo One", sans-serif;
+    padding: 1rem;
+    width: 200px;
+}
+
+.img {
+    width: 300px;
+    border-radius: 16px;
+}
